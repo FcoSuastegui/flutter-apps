@@ -3,6 +3,7 @@ import 'package:flutter_apps/src/data/model/project.dart';
 import 'package:flutter_apps/src/data/usecase/project.dart';
 import 'package:flutter_apps/src/presentation/views/home/cubit/home_cubit.dart';
 import 'package:flutter_apps/src/presentation/widgets/cards/project_card.dart';
+import 'package:flutter_apps/src/presentation/widgets/slivers/refresh_sliver_scroll.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
@@ -50,14 +51,14 @@ class HomeView extends StatelessWidget {
             final cubit = context.read<HomeCubit>();
             final pagingController = cubit.pagingController;
 
-            return CustomScrollView(
+            return RefreshSliverScrollView(
+              onRefresh: () => pagingController.refresh(),
               slivers: [
-                const SliverToBoxAdapter(child: SizedBox(height: 0)),
                 PagedSliverList.separated(
                   pagingController: pagingController,
                   builderDelegate: PagedChildBuilderDelegate<ProjectModel>(
                     itemBuilder: (context, project, index) => Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                       child: ProjectCard(index: index, project: project),
                     ),
                   ),

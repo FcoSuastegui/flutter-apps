@@ -3,6 +3,23 @@ import 'package:flutter_apps/src/data/model/project.dart';
 
 class ProjectUseCase {
   Future<ListPage<ProjectModel>> getProjects(int page) async {
+    List<Map<String, dynamic>> jsonProjects = [
+      {
+        "title": "On Boarding",
+        "description": "Flutter UI + On Boarding",
+        "designer": "Free",
+        "pathImage": 'assets/home/images/onboarding.png',
+        "route": "/on-boarding",
+      },
+      {
+        "title": "Travel App",
+        "description": "Flutter UI + Travel App",
+        "designer": "Damoty Pixel",
+        "pathImage": 'assets/home/images/travel-app.png',
+        "route": "/travel-app",
+      },
+    ];
+
     final List<ProjectModel> list = <ProjectModel>[];
     for (var item in jsonProjects) {
       list.add(ProjectModel.fromMap(item));
@@ -13,13 +30,3 @@ class ProjectUseCase {
     );
   }
 }
-
-List<Map<String, dynamic>> jsonProjects = [
-  {
-    "title": "On Boarding",
-    "description": "Flutter UI + On Boarding",
-    "designer": "Mao Lop",
-    "pathImage": 'assets/home/images/onboarding.png',
-    "route": "/on-boarding",
-  }
-];

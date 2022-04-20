@@ -18,7 +18,7 @@ class HomeCubit extends Cubit<int> {
 
   final ProjectUseCase _projectUse;
 
-  static const _pageSize = 100;
+  static const _pageSize = 10;
 
   Future<void> init() async {
     _pagingController.addPageRequestListener(getProjects);
