@@ -28,6 +28,7 @@ flutter:
   assets:
     - assets/home/images/
     - assets/onboarding/images/
+    - assets/travelapp/images/
 
   fonts:
     - family: Mulish
