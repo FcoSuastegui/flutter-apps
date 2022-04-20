@@ -12,6 +12,5 @@ Flutter apps with cool design and animations
  https://pixel.buildwithangga.com/details/travel-app-mobile
  | Home Screen | Detail Screen|
  |-----------|-----------|
- |<img src="https://media.giphy.com/media/QE4ePwfrDUdp2OTegD/giphy.gif" width="250" >|<img src="https://media.giphy.com/media/Lr51m3IIi3yLae1bV0/giphy-downsized-large.gif" width="250"> |
-
-### [Inspiration](https://www.instagram.com/p/B-kGS--gluL/) <img src="https://i.ibb.co/dK1QRMq/logo-instagram-icon.png"  width="16">
+ |<img src="https://media.giphy.com/media/4h6EXncjb7snGVszDy/giphy.gif" width="250" >|<img src="https://media.giphy.com/media/iENl4wT3KtjBO4DP8F/giphy.gif" width="250"> |
+ 
