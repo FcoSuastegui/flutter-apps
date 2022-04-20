@@ -14,4 +14,13 @@ class AppRouter {
   Future<dynamic> pushNamed(String name, {Object? arguments}) async {
     return await Navigator.of(context).pushNamed(name, arguments: arguments);
   }
+
+  Future<dynamic> push(Widget page, {bool fullscreenDialog = false}) async {
+    return await Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => page,
+        fullscreenDialog: fullscreenDialog,
+      ),
+    );
+  }
 }
