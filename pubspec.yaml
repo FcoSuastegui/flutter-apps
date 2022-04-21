@@ -10,11 +10,16 @@ environment:
 
 dependencies:
   cupertino_icons: ^1.0.2
+  dotted_border: ^2.0.0+2
+  flashy_tab_bar2: ^0.0.4
   flutter:
     sdk: flutter
   flutter_bloc: ^8.0.1
+  flutter_slidable: ^0.6.0
   google_fonts: ^2.3.1
   infinite_scroll_pagination: ^3.1.0
+  intl: ^0.17.0
+  simple_animations: ^3.0.0
 
 dev_dependencies:
   flutter_lints: ^1.0.0
@@ -24,11 +29,12 @@ dev_dependencies:
 flutter:
 
   uses-material-design: true
-  
+
   assets:
     - assets/home/images/
     - assets/onboarding/images/
     - assets/travelapp/images/
+    - assets/ecommerce/images/
 
   fonts:
     - family: Mulish
