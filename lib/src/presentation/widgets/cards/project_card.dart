@@ -17,9 +17,8 @@ class ProjectCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final router = AppRouter.of(context);
     return Container(
-      height: 220,
+      height: 190,
       clipBehavior: Clip.antiAlias,
-      margin: const EdgeInsets.only(bottom: 20),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(20),
@@ -54,7 +53,7 @@ class ProjectCard extends StatelessWidget {
                 Row(
                   children: [
                     Opacity(
-                      opacity: .6,
+                      opacity: 0.6,
                       child: Container(
                         padding: const EdgeInsets.all(14),
                         decoration: BoxDecoration(

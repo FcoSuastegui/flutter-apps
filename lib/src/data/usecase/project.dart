@@ -18,6 +18,13 @@ class ProjectUseCase {
         "pathImage": 'assets/home/images/travel-app.png',
         "route": "/travel-app",
       },
+      {
+        "title": "E-commerce Application",
+        "description": "Flutter UI + E-commerce.",
+        "designer": "Afgprogrammer",
+        "pathImage": 'assets/home/images/ecommerce.png',
+        "route": "/ecommerce-app",
+      },
     ];
 
     final List<ProjectModel> list = <ProjectModel>[];
