@@ -5,13 +5,13 @@ import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 
 part 'home_state.dart';
 
-class HomeCubit extends Cubit<int> {
+class HomeCubit extends Cubit<HomeSate> {
   HomeCubit({
     required PagingController<int, ProjectModel> pagingController,
     required ProjectUseCase projectUse,
   })  : _pagingController = pagingController,
         _projectUse = projectUse,
-        super(0);
+        super(HomeSate());
 
   final PagingController<int, ProjectModel> _pagingController;
   PagingController<int, ProjectModel> get pagingController => _pagingController;
@@ -33,6 +33,10 @@ class HomeCubit extends Cubit<int> {
     list.itemList.length <= _pageSize
         ? _pagingController.appendLastPage(list.itemList)
         : _pagingController.appendPage(list.itemList, pageKey + 1);
+  }
+
+  void setGridView() {
+    emit(state.copyWith(isGridView: !state.isGridView));
   }
 
   void dispose() {
